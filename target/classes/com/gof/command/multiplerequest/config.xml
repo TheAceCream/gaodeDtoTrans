@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <className>com.gof.command.multiplerequest.HelpCommand</className>
-    <className>com.gof.command.multiplerequest.MinimizeCommand</className>
-</config>
