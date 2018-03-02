@@ -7,7 +7,7 @@ package com.gof.command.revoke;
  */
 public class Test {
     public static void main(String[] args) {
-        CommandManager commandManager = new CommandManager();
+        /*CommandManager commandManager = new CommandManager();
 
         Receiver ra = new ConcreteReceiverA();
         Receiver rb = new ConcreteReceiverB();
@@ -25,6 +25,23 @@ public class Test {
 
         //反撤销命令
         commandManager.redo();
-        commandManager.redo();
+        commandManager.redo();*/
+
+        /***************************************************/
+
+
+        CommandManager invoker = new CommandManager();
+
+        Workflow workflow = new Workflow(3);
+        WorkFlowReceiver wr = new WorkFlowReceiver(workflow);
+
+        Command wc = new WorkflowCommand(wr);
+
+        invoker.executeCommand(wc);
+
+        invoker.undo();
+
+        invoker.redo();
+
     }
 }
