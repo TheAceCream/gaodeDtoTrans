@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ba9c670-5b75-46fb-9a95-20de82811143" name="Default" comment="" />
+    <list default="true" id="1ba9c670-5b75-46fb-9a95-20de82811143" name="Default" comment="修改备注">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Notifier.java" afterPath="$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Notifier.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,198 +30,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-              <folding>
-                <element signature="e#367#411#1" expanded="true" />
-                <element signature="e#690#726#1" expanded="true" />
-                <element signature="e#735#769#1" expanded="true" />
-                <element signature="e#863#876#0" expanded="true" />
-                <element signature="e#863#876#0" expanded="true" />
-                <element signature="e#863#894#0" expanded="true" />
-                <element signature="e#904#917#0" expanded="true" />
-                <element signature="e#904#917#0" expanded="true" />
-                <element signature="e#904#934#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountBookViewer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBookViewer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Boss.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Boss.java">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding>
-                <element signature="e#289#305#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#391#407#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#480#511#0" expanded="true" />
-                <element signature="e#480#511#0" expanded="true" />
-                <element signature="e#614#646#0" expanded="true" />
-                <element signature="e#614#646#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CPA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/CPA.java">
+      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-              <folding>
-                <element signature="e#213#331#0" expanded="true" />
-                <element signature="e#217#231#0" expanded="true" />
-                <element signature="e#217#244#0" expanded="true" />
-                <element signature="e#217#244#0" expanded="true" />
-                <element signature="e#213#331#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnumSingle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/EnumSingle.java">
+      <file leaf-file-name="EventHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/EventHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaticSingle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/StaticSingle.java">
+      <file leaf-file-name="GoodNotifier.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/GoodNotifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-              <folding>
-                <element signature="e#300#434#0" expanded="true" />
-                <element signature="e#300#434#0" expanded="true" />
-                <element signature="e#487#488#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkExperience.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/WorkExperience.java">
+      <file leaf-file-name="Notifier.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Notifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-              <folding>
-                <element signature="e#177#178#0" expanded="true" />
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Test.java">
+      <file leaf-file-name="ObserverA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/ObserverA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#307#347#0" expanded="true" />
-                <element signature="e#329#346#0" expanded="true" />
-                <element signature="e#366#384#0" expanded="true" />
-                <element signature="e#366#384#0" expanded="true" />
-                <element signature="e#394#412#0" expanded="true" />
-                <element signature="e#394#412#0" expanded="true" />
-                <element signature="e#441#477#1" expanded="true" />
-                <element signature="e#634#667#1" expanded="true" />
-                <element signature="e#676#698#0" expanded="true" />
-                <element signature="e#676#698#0" expanded="true" />
-                <element signature="e#708#737#0" expanded="true" />
-                <element signature="e#708#737#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resume.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Resume.java">
+      <file leaf-file-name="ObserverB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/ObserverB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#262#279#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#1208#1227#1" expanded="true" />
-                <element signature="e#1236#1258#1" expanded="true" />
-                <element signature="e#1267#1303#1" expanded="true" />
-                <element signature="e#1312#1368#1" expanded="true" />
-                <element signature="e#1378#1409#1" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1598#1641#0" expanded="true" />
-                <element signature="e#1697#1776#0" expanded="true" />
-                <element signature="e#1701#1712#0" expanded="true" />
-                <element signature="e#1697#1776#0" expanded="true" />
-                <element signature="e#1754#1764#0" expanded="true" />
-                <element signature="e#1754#1764#0" expanded="true" />
-                <element signature="e#1832#1872#0" expanded="true" />
-                <element signature="e#1832#1872#0" expanded="true" />
-                <element signature="e#1902#1925#0" expanded="true" />
-                <element signature="e#1902#1925#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountBook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#192#213#0" expanded="true" />
-                <element signature="e#205#211#0" expanded="true" />
-                <element signature="e#263#281#0" expanded="true" />
-                <element signature="e#263#281#0" expanded="true" />
-                <element signature="e#360#431#0" expanded="true" />
-                <element signature="e#365#374#0" expanded="true" />
-                <element signature="e#360#431#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,6 +120,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -242,14 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/DepartmentHeader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/ChainOfResponsibilityClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/GroupLeader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/CustomInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/intermediary/Colleague.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gof/intermediary/Mediator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteColleagueA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteColleagueB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteMediator.java" />
@@ -293,6 +174,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gof/prototype/WorkExperience.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gof/prototype/Resume.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gof/prototype/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/multiplerequest/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Caretaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Workflow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkFlowReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkflowCaretaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkflowCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Notifier.java" />
       </list>
     </option>
   </component>
@@ -320,6 +209,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -335,9 +225,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -442,7 +330,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="visitor" />
+              <option name="myItemId" value="observer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,162 +360,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
+              <option name="myItemId" value="observer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strategy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="state" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="single" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design_pattern" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chainofresponsibility" />
+              <option name="myItemId" value="eventHandler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,7 +383,7 @@
     <property name="node.js.selected.package.jscs" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../service_provider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThreadInAction" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -667,47 +411,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test (3)">
-    <configuration default="false" name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gof.interpreter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.gof.interpreter.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="design_pattern" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.gof.interpreter.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.gof.interpreter.example.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="design_pattern" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="false" name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -756,6 +460,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.gof.prototype.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="design_pattern" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gof.command.multiplerequest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gof.command.multiplerequest.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="design_pattern" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.gof.command.revoke.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.gof.command.revoke.Test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1213,19 +957,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Test (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Test (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test (5)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Test (3)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Test (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test (5)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Test (3)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Test (4)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test (5)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Test (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test (4)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test (3)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test (5)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -1251,12 +995,36 @@
       <workItem from="1519610266612" duration="638000" />
       <workItem from="1519696633103" duration="7736000" />
       <workItem from="1519783527828" duration="8504000" />
-      <workItem from="1519869526957" duration="11712000" />
+      <workItem from="1519869526957" duration="26332000" />
+      <workItem from="1520215806557" duration="728000" />
+      <workItem from="1520301488900" duration="694000" />
     </task>
+    <task id="LOCAL-00001" summary="项目提交">
+      <created>1519886367623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519886367623</updated>
+    </task>
+    <task id="LOCAL-00002" summary="项目注释修改">
+      <created>1519891401892</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519891401892</updated>
+    </task>
+    <task id="LOCAL-00003" summary="命令模式+备忘录模式 举例">
+      <created>1519987144448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519987144448</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99756000" />
+    <option name="totallyTimeSpent" value="115798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1268,32 +1036,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28971255" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28805238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1308,6 +1075,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目提交" />
+    <MESSAGE value="项目注释修改" />
+    <MESSAGE value="命令模式+备忘录模式 举例" />
+    <MESSAGE value="修改备注" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改备注" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -1316,8 +1090,14 @@
           <line>22</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gof/command/Receiver.java</url>
+          <line>8</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1326,98 +1106,101 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/ChainOfResponsibilityClient.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Bill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="119">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/RealChain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/ConsumeBill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/IncomeBill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+        <state relative-caret-position="391">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/chainofresponsibility/usetogetherforbuilder/Request.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBookViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/intermediary/Mediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteColleagueB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#150#151#0" expanded="false" />
-            <element signature="e#181#182#0" expanded="false" />
-            <element signature="e#220#221#0" expanded="false" />
-            <element signature="e#263#264#0" expanded="false" />
-            <element signature="e#304#305#0" expanded="false" />
-            <element signature="e#333#351#0" expanded="false" />
-            <element signature="e#333#351#0" expanded="false" />
-            <element signature="e#358#359#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/intermediary/Colleague.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <element signature="e#156#157#0" expanded="false" />
-            <element signature="e#196#197#0" expanded="false" />
-          </folding>
+          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteColleagueA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="e#150#151#0" expanded="false" />
-            <element signature="e#181#182#0" expanded="false" />
-            <element signature="e#220#221#0" expanded="false" />
-            <element signature="e#263#264#0" expanded="false" />
-            <element signature="e#304#305#0" expanded="false" />
-            <element signature="e#333#351#0" expanded="false" />
-            <element signature="e#333#351#0" expanded="false" />
-            <element signature="e#358#359#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/intermediary/ConcreteMediator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="e#272#273#0" expanded="false" />
-            <element signature="e#313#314#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-            <element signature="e#551#552#0" expanded="false" />
-            <element signature="e#776#941#0" expanded="false" />
-            <element signature="e#776#941#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="217">
+          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/CPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/EnumSingle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/StaticSingle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/WorkExperience.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1428,678 +1211,324 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/Flyweight.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/decorate/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="128">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/UnsharedConcreteFlyweight.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/memento/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/multiplerequest/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/ConcreteFlyweight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="e#399#400#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#606#630#0" expanded="false" />
-            <element signature="e#606#630#0" expanded="false" />
-            <element signature="e#660#684#0" expanded="false" />
-            <element signature="e#660#684#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/ConcreteCompositeFlyweight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#297#317#0" expanded="false" />
-            <element signature="e#372#373#0" expanded="false" />
-            <element signature="e#382#408#0" expanded="false" />
-            <element signature="e#382#408#0" expanded="false" />
-            <element signature="e#382#408#0" expanded="false" />
-            <element signature="e#414#415#0" expanded="false" />
-            <element signature="e#490#517#1" expanded="false" />
-            <element signature="e#526#662#0" expanded="false" />
-            <element signature="e#531#541#0" expanded="false" />
-            <element signature="e#526#662#0" expanded="false" />
-            <element signature="e#587#602#0" expanded="false" />
-            <element signature="e#587#602#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/FlyweightFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#335#355#0" expanded="false" />
-            <element signature="e#453#494#1" expanded="false" />
-            <element signature="e#504#541#1" expanded="false" />
-            <element signature="e#520#540#0" expanded="false" />
-            <element signature="e#520#540#0" expanded="false" />
-            <element signature="e#551#675#0" expanded="false" />
-            <element signature="e#551#675#0" expanded="false" />
-            <element signature="e#639#664#0" expanded="false" />
-            <element signature="e#639#664#0" expanded="false" />
-            <element signature="e#639#664#0" expanded="false" />
-            <element signature="e#812#884#1" expanded="false" />
-            <element signature="e#894#1030#0" expanded="false" />
-            <element signature="e#899#920#0" expanded="false" />
-            <element signature="e#894#1030#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/flyweight/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#334#357#1" expanded="false" />
-            <element signature="e#525#575#1" expanded="false" />
-            <element signature="e#585#627#1" expanded="false" />
-            <element signature="e#681#731#1" expanded="false" />
-            <element signature="e#785#831#1" expanded="false" />
-            <element signature="e#885#927#1" expanded="false" />
-            <element signature="e#1000#1034#0" expanded="false" />
-            <element signature="e#1000#1034#0" expanded="false" />
-            <element signature="e#1064#1098#0" expanded="false" />
-            <element signature="e#1064#1098#0" expanded="false" />
-            <element signature="e#1128#1162#0" expanded="false" />
-            <element signature="e#1128#1162#0" expanded="false" />
-            <element signature="e#1174#1233#1" expanded="false" />
-            <element signature="e#1364#1419#1" expanded="false" />
-            <element signature="e#1395#1418#0" expanded="false" />
-            <element signature="e#1408#1416#0" expanded="false" />
-            <element signature="e#1428#1456#0" expanded="false" />
-            <element signature="e#1428#1456#0" expanded="false" />
-            <element signature="e#1466#1493#0" expanded="false" />
-            <element signature="e#1466#1493#0" expanded="false" />
-            <element signature="e#1503#1539#0" expanded="false" />
-            <element signature="e#1503#1539#0" expanded="false" />
-            <element signature="e#1549#1581#0" expanded="false" />
-            <element signature="e#1549#1581#0" expanded="false" />
-            <element signature="e#1592#1642#1" expanded="false" />
-            <element signature="e#1651#1716#1" expanded="false" />
-            <element signature="e#1725#1790#1" expanded="false" />
-            <element signature="e#1818#1876#0" expanded="false" />
-            <element signature="e#1818#1876#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/总结.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/AbstractExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/TerminalExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/NonterminalExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/macrocommand/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-          </folding>
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/commandqueue/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#470#502#1" expanded="true" />
-            <element signature="e#511#579#1" expanded="true" />
-            <element signature="e#543#578#0" expanded="true" />
-            <element signature="e#556#576#0" expanded="true" />
-            <element signature="e#588#622#0" expanded="true" />
-            <element signature="e#588#622#0" expanded="true" />
-            <element signature="e#632#669#0" expanded="true" />
-            <element signature="e#632#669#0" expanded="true" />
-            <element signature="e#679#713#0" expanded="true" />
-            <element signature="e#679#713#0" expanded="true" />
-            <element signature="e#723#760#0" expanded="true" />
-            <element signature="e#723#760#0" expanded="true" />
-            <element signature="e#770#883#0" expanded="true" />
-            <element signature="e#775#812#0" expanded="true" />
-            <element signature="e#770#883#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/Context.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/multiplerequest/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="62" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/multiplerequest/XMLUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/multiplerequest/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/命令模式总结.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/macrocommand/PlayCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#159#160#0" expanded="true" />
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/ExpressionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#258#286#0" expanded="true" />
-            <element signature="e#367#400#1" expanded="true" />
-            <element signature="e#380#399#0" expanded="true" />
-            <element signature="e#380#399#0" expanded="true" />
-            <element signature="e#380#399#0" expanded="true" />
-            <element signature="e#409#446#1" expanded="true" />
-            <element signature="e#455#1398#0" expanded="true" />
-            <element signature="e#455#1398#0" expanded="true" />
-            <element signature="e#694#849#0" expanded="true" />
-            <element signature="e#694#849#0" expanded="true" />
-            <element signature="e#950#1107#0" expanded="true" />
-            <element signature="e#950#1107#0" expanded="true" />
-            <element signature="e#1208#1365#0" expanded="true" />
-            <element signature="e#1208#1365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/AbstractExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="e#309#349#1" expanded="true" />
-            <element signature="e#327#348#0" expanded="true" />
-            <element signature="e#358#395#1" expanded="true" />
-            <element signature="e#371#394#0" expanded="true" />
-            <element signature="e#371#394#0" expanded="true" />
-            <element signature="e#371#394#0" expanded="true" />
-            <element signature="e#437#458#0" expanded="true" />
-            <element signature="e#437#458#0" expanded="true" />
-            <element signature="e#499#578#1" expanded="true" />
-            <element signature="e#533#576#0" expanded="true" />
-            <element signature="e#533#576#0" expanded="true" />
-            <element signature="e#533#576#0" expanded="true" />
-            <element signature="e#622#665#0" expanded="true" />
-            <element signature="e#641#664#0" expanded="true" />
-            <element signature="e#622#665#0" expanded="true" />
-            <element signature="e#675#704#0" expanded="true" />
-            <element signature="e#675#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/SpeedExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#199#217#1" expanded="true" />
-            <element signature="e#226#498#0" expanded="true" />
-            <element signature="e#226#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/ScaleExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#199#217#1" expanded="true" />
-            <element signature="e#226#489#0" expanded="true" />
-            <element signature="e#226#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/NoteExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="e#193#210#1" expanded="true" />
-            <element signature="e#780#788#0" expanded="true" />
-            <element signature="e#780#788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/interpreter/example/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#357#390#1" expanded="true" />
-            <element signature="e#416#543#0" expanded="true" />
-            <element signature="e#416#543#0" expanded="true" />
-            <element signature="e#553#590#1" expanded="true" />
-            <element signature="e#617#845#0" expanded="true" />
-            <element signature="e#624#645#0" expanded="true" />
-            <element signature="e#617#845#0" expanded="true" />
-            <element signature="e#761#782#0" expanded="true" />
-            <element signature="e#856#920#0" expanded="true" />
-            <element signature="e#856#920#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/VisitorB.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/Visitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/ConcreteElementA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/Invoker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-          </folding>
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/VisitorB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="187">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/ConcreteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#283#297#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#305#316#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#427#441#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#449#460#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/Element.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/ConcreteCommandA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/ConcreteReceiverA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#201#202#0" expanded="false" />
+            <element signature="e#244#245#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/ConcreteReceiverB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#201#202#0" expanded="false" />
+            <element signature="e#244#245#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/ConcreteCommandB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
+            <element signature="e#313#314#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#429#430#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkflowCaretaker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/VisitorA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="29" />
           <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#283#297#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#305#316#0" expanded="true" />
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#427#441#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#449#460#0" expanded="true" />
-            <element signature="e#427#460#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="false" />
+            <element signature="e#182#183#0" expanded="false" />
+            <element signature="e#232#233#0" expanded="false" />
+            <element signature="e#272#273#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/ConcreteElementB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Workflow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="false" />
+            <element signature="e#180#181#0" expanded="false" />
+            <element signature="e#209#210#0" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#276#277#0" expanded="false" />
+            <element signature="e#310#311#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkFlowReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+        <state relative-caret-position="459">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <element signature="e#406#449#1" expanded="true" />
-            <element signature="e#647#679#1" expanded="true" />
-            <element signature="e#688#720#1" expanded="true" />
+            <element signature="e#221#222#0" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
+            <element signature="e#302#303#0" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/ObjectStructure.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/CommandManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="816">
+          <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#202#226#0" expanded="true" />
-            <element signature="e#215#224#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#279#296#0" expanded="true" />
-            <element signature="e#279#296#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#355#375#0" expanded="true" />
-            <element signature="e#355#375#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#434#511#0" expanded="true" />
-            <element signature="e#439#454#0" expanded="true" />
-            <element signature="e#434#511#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Bill.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/WorkflowCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/ConsumeBill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="289">
+          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#330#331#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/IncomeBill.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/revoke/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="493">
+          <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
           <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#748#794#1" expanded="true" />
+            <element signature="e#804#840#1" expanded="true" />
+            <element signature="e#849#902#1" expanded="true" />
+            <element signature="e#912#949#1" expanded="true" />
+            <marker date="1519986584117" expanded="false" signature="330:337" ph="val" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBookViewer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/command/macrocommand/AudioPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Boss.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding>
-            <element signature="e#289#305#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#391#407#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#480#511#0" expanded="true" />
-            <element signature="e#480#511#0" expanded="true" />
-            <element signature="e#614#646#0" expanded="true" />
-            <element signature="e#614#646#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/AccountBook.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#192#213#0" expanded="true" />
-            <element signature="e#205#211#0" expanded="true" />
-            <element signature="e#263#281#0" expanded="true" />
-            <element signature="e#263#281#0" expanded="true" />
-            <element signature="e#360#431#0" expanded="true" />
-            <element signature="e#365#374#0" expanded="true" />
-            <element signature="e#360#431#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="e#367#411#1" expanded="true" />
-            <element signature="e#690#726#1" expanded="true" />
-            <element signature="e#735#769#1" expanded="true" />
-            <element signature="e#863#876#0" expanded="true" />
-            <element signature="e#863#876#0" expanded="true" />
-            <element signature="e#863#894#0" expanded="true" />
-            <element signature="e#904#917#0" expanded="true" />
-            <element signature="e#904#917#0" expanded="true" />
-            <element signature="e#904#934#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/visitor/example/CPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="e#213#331#0" expanded="true" />
-            <element signature="e#217#231#0" expanded="true" />
-            <element signature="e#217#244#0" expanded="true" />
-            <element signature="e#217#244#0" expanded="true" />
-            <element signature="e#213#331#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/EnumSingle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/GoodNotifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/single/StaticSingle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/ObserverA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding>
-            <element signature="e#300#434#0" expanded="true" />
-            <element signature="e#300#434#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/WorkExperience.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/ObserverB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding>
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Resume.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/observer/eventHandler/Notifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#262#279#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#1208#1227#1" expanded="true" />
-            <element signature="e#1236#1258#1" expanded="true" />
-            <element signature="e#1267#1303#1" expanded="true" />
-            <element signature="e#1312#1368#1" expanded="true" />
-            <element signature="e#1378#1409#1" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1598#1641#0" expanded="true" />
-            <element signature="e#1697#1776#0" expanded="true" />
-            <element signature="e#1701#1712#0" expanded="true" />
-            <element signature="e#1697#1776#0" expanded="true" />
-            <element signature="e#1754#1764#0" expanded="true" />
-            <element signature="e#1754#1764#0" expanded="true" />
-            <element signature="e#1832#1872#0" expanded="true" />
-            <element signature="e#1832#1872#0" expanded="true" />
-            <element signature="e#1902#1925#0" expanded="true" />
-            <element signature="e#1902#1925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gof/prototype/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#347#0" expanded="true" />
-            <element signature="e#329#346#0" expanded="true" />
-            <element signature="e#366#384#0" expanded="true" />
-            <element signature="e#366#384#0" expanded="true" />
-            <element signature="e#394#412#0" expanded="true" />
-            <element signature="e#394#412#0" expanded="true" />
-            <element signature="e#441#477#1" expanded="true" />
-            <element signature="e#634#667#1" expanded="true" />
-            <element signature="e#676#698#0" expanded="true" />
-            <element signature="e#676#698#0" expanded="true" />
-            <element signature="e#708#737#0" expanded="true" />
-            <element signature="e#708#737#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

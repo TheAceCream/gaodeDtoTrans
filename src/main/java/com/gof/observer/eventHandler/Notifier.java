@@ -1,7 +1,7 @@
 package com.gof.observer.eventHandler;
 /**
  * 通知者的 抽象类
- * @author xujun
+ * @author HYC
  *
  */
 public abstract class Notifier {
