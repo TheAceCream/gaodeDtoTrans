@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveMapper">
+    <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.Approve">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="approve_flow_id" property="approveFlowId" jdbcType="BIGINT"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="department_id" property="departmentId" jdbcType="BIGINT"/>
+        <result column="department_desc" property="departmentDesc" jdbcType="VARCHAR"/>
+        <result column="budget" property="budget" jdbcType="BIGINT"/>
+        <result column="sponsor_id" property="sponsorId" jdbcType="BIGINT"/>
+        <result column="sponsor_desc" property="sponsorDesc" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="amount" property="amount" jdbcType="BIGINT"/>
+        <result column="company_id" property="companyId" jdbcType="BIGINT"/>
+        <result column="cate_id" property="cateId" jdbcType="BIGINT"/>
+        <result column="type" property="type" jdbcType="TINYINT"/>
+        <result column="is_test" property="isTest" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, approve_flow_id, title, department_id, department_desc, budget, sponsor_id,
+        sponsor_desc, create_time, update_time, end_time, status, amount, company_id, cate_id, type, is_test
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getMyLaunchApprovalList" parameterType="com.qf58.ace.approve.dto.ApproveSelectDto"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve
+        <where>
+            <if test="status!=null">
+                <choose>
+                    <when test="status==5">
+                        and status in (2,3)
+                    </when>
+                    <otherwise>
+                        and status = #{status,jdbcType=TINYINT}
+                    </otherwise>
+                </choose>
+            </if>
+            <if test="approvalId!=null">
+                and id = #{approvalId,jdbcType=BIGINT}
+            </if>
+            <if test="sponsorId!=null">
+                and sponsor_id = #{sponsorId,jdbcType=BIGINT}
+            </if>
+            <if test="title!=null">
+                and title like CONCAT('%',#{title,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="sponsorDesc!=null">
+                and sponsor_desc like CONCAT('%',#{sponsorDesc,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="getMyLaunchApprovingCount" resultType="java.lang.Long"
+            parameterType="java.lang.Long">
+        select count(1) from t_approve where status = 1
+        <if test="userId!=null">
+            and sponsor_id = #{userId}
+        </if>
+    </select>
+
+    <select id="getMyApprovedCount" resultType="java.lang.Long" parameterType="java.lang.Long">
+        select DISTINCT count(DISTINCT a.id) FROM t_approve a INNER JOIN t_approve_procedure b on
+        a.id = b.approve_id
+        where a.status = 1 and b.status in (2,3)
+        <if test="userId!=null">
+            and b.approver_id = #{userId}
+        </if>
+    </select>
+
+    <select id="getWaitMeApproveList" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/> from t_approve
+        WHERE id in
+        <foreach collection="waitMeApproveIdList" item="dramaId" open="(" close=")" separator=",">
+            #{dramaId}
+        </foreach>
+        order by create_time desc
+    </select>
+
+    <select id="getMyApprovedList" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/> from t_approve
+        WHERE id in
+        <foreach collection="myApprovedList" item="dramaId" open="(" close=")" separator=",">
+            #{dramaId}
+        </foreach>
+        order by create_time desc
+    </select>
+
+    <select id="getApproveWithoutRole" parameterType="com.qf58.ace.approve.dto.ApproveSelectDto"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve
+        <where>
+            <if test="approvalId!=null">
+                and id = #{approvalId,jdbcType=BIGINT}
+            </if>
+            <if test="status!=null">
+                and status = #{status,jdbcType=TINYINT}
+            </if>
+            <if test="title!=null">
+                and title like CONCAT('%',#{title,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="sponsorId!=null">
+                and sponsor_id = #{sponsorId,jdbcType=BIGINT}
+            </if>
+            <if test="sponsorDesc!=null">
+                and sponsor_desc like CONCAT('%',#{sponsorDesc,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="companyId!=null">
+                and company_id = #{companyId,jdbcType=BIGINT}
+            </if>
+            <if test="cateId">
+                and cate_id = #{cateId,jdbcType=BIGINT}
+            </if>
+        </where>
+
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from t_approve
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.qf58.ace.approve.entity.Approve">
+        insert into t_approve (id,
+                               approve_flow_id,
+                               title,
+                               department_id,
+                               department_desc,
+                               budget,
+                               sponsor_id,
+                               sponsor_desc,
+                               create_time,
+                               create_time,
+                               end_time,
+                               status,
+                               amount,
+                               company_id,
+                               cate_id,
+                               type,
+                               is_test)
+        values (#{id,jdbcType=BIGINT},
+                #{approveFlowId,jdbcType=BIGINT},
+                #{title,jdbcType=VARCHAR},
+                #{departmentId,jdbcType=BIGINT},
+                #{departmentDesc,jdbcType=VARCHAR},
+                #{budget,jdbcType=BIGINT},
+                #{sponsorId,jdbcType=BIGINT},
+                #{sponsorDesc,jdbcType=VARCHAR},
+                #{createTime,jdbcType=TIMESTAMP},
+                #{updateTime,jdbcType=TIMESTAMP},
+                #{endTime,jdbcType=TIMESTAMP},
+                #{status,jdbcType=TINYINT},
+                #{amount,jdbcType=BIGINT},
+                #{companyId,jdbcType=BIGINT},
+                #{cateId,jdbcType=BIGINT},
+                #{type,jdbcType=TINYINT},
+                #{is_test,jdbcType=TINYINT})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.qf58.ace.approve.entity.Approve">
+        insert into t_approve
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="approveFlowId != null">
+                approve_flow_id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="departmentId != null">
+                department_id,
+            </if>
+            <if test="departmentDesc != null">
+                department_desc,
+            </if>
+            <if test="budget != null">
+                budget,
+            </if>
+            <if test="sponsorId != null">
+                sponsor_id,
+            </if>
+            <if test="sponsorDesc != null">
+                sponsor_desc,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="endTime != null">
+                end_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="amount != null">
+                amount,
+            </if>
+            <if test="companyId != null">
+                company_id,
+            </if>
+            <if test="cateId != null">
+                cate_id,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="isTest != null">
+                is_test,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="approveFlowId != null">
+                #{approveFlowId,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentId != null">
+                #{departmentId,jdbcType=BIGINT},
+            </if>
+            <if test="departmentDesc != null">
+                #{departmentDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="budget != null">
+                #{budget,jdbcType=BIGINT},
+            </if>
+            <if test="sponsorId != null">
+                #{sponsorId,jdbcType=BIGINT},
+            </if>
+            <if test="sponsorDesc != null">
+                #{sponsorDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=TINYINT},
+            </if>
+            <if test="amount != null">
+                #{amount,jdbcType=TINYINT},
+            </if>
+            <if test="companyId != null">
+                #{companyId,jdbcType=BIGINT},
+            </if>
+            <if test="cateId != null">
+                #{cateId,jdbcType=BIGINT},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=TINYINT},
+            </if>
+            <if test="isTest != null">
+                #{isTest,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.qf58.ace.approve.dto.ApproveDto">
+        update t_approve
+        <set>
+            <if test="approveFlowId != null">
+                approve_flow_id = #{approveFlowId,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentId != null">
+                department_id = #{departmentId,jdbcType=BIGINT},
+            </if>
+            <if test="departmentDesc != null">
+                department_desc = #{departmentDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="budget != null">
+                budget = #{budget,jdbcType=BIGINT},
+            </if>
+            <if test="sponsorId != null">
+                sponsor_id = #{sponsorId,jdbcType=BIGINT},
+            </if>
+            <if test="sponsorDesc != null">
+                sponsor_desc = #{sponsorDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="amount != null">
+                amount = #{amount,jdbcType=BIGINT},
+            </if>
+            <if test="cateId != null">
+                is_test = #{cateId,jdbcType=TINYINT},
+            </if>
+            <if test="companyId != null">
+                company_id = #{companyId,jdbcType=BIGINT},
+            </if>
+            <if test="cateId != null">
+                cate_id = #{cateId,jdbcType=BIGINT},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=TINYINT},
+            </if>
+            <if test="isTest != null">
+                is_test = #{isTest,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.qf58.ace.approve.entity.Approve">
+        update t_approve
+        set approve_flow_id = #{approveFlowId,jdbcType=BIGINT},
+            title           = #{title,jdbcType=VARCHAR},
+            department_id   = #{departmentId,jdbcType=BIGINT},
+            department_desc = #{departmentDesc,jdbcType=VARCHAR},
+            budget          = #{budget,jdbcType=BIGINT},
+            sponsor_id      = #{sponsorId,jdbcType=BIGINT},
+            sponsor_desc    = #{sponsorDesc,jdbcType=VARCHAR},
+            create_time     = #{createTime,jdbcType=TIMESTAMP},
+            update_time     = #{updateTime,jdbcType=TIMESTAMP},
+            end_time        = #{endTime,jdbcType=TIMESTAMP},
+            status          = #{status,jdbcType=TINYINT},
+            amount          = #{amount,jdbcType=BIGINT},
+            company_id      = #{companyId,jdbcType=BIGINT},
+            cate_id         = #{cateId,jdbcType=BIGINT},
+            type            = #{type,jdbcType=TINYINT},
+            is_test         = #{is_test,jdbcType=TINYINT}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+
+</mapper>

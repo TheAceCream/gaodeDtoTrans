@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="${dubbo.appname}"/>
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="${zookeeper.server}" group="${dubbo.group}" file="/home/work/.dubbo/ace-service/dubbo-registry/dubbo-registry.properties"/>
+    <dubbo:provider version="${producer.version}" />
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="${dubbo.port}"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.qf58.ace.approve.api.service.ApproveService" ref="approveService" timeout="3000"/>
+    <dubbo:service interface="com.qf58.ace.approve.api.service.ApproveProcedureService" ref="approveProcedureService"/>
+    <dubbo:service interface="com.qf58.ace.approve.api.service.ApproveFlowService" ref="approveFlowService"/>
+    <dubbo:service interface="com.qf58.ace.approve.api.service.ApproveFileService" ref="approveFileService"/>
+    <dubbo:service interface="com.qf58.ace.finance.api.service.OrderBillsService" ref="orderBillsService" />
+
+    <!--依赖服务-->
+
+    <!--员工权限服务-->
+    <dubbo:reference interface="com.qf58.acepassport.service.AceDeptService" id="aceDeptService" check="false"/>
+    <dubbo:reference interface="com.qf58.acepassport.service.AceRoleService" id="aceRoleService" check="false"/>
+    <dubbo:reference interface="com.qf58.acepassport.service.AceUserService" id="aceUserService" check="false"/>
+    <dubbo:reference interface="com.qf58.acepassport.service.AceAuthService" id="aceAuthService" check="false"/>
+    <!-- 订单服务 -->
+    <dubbo:reference interface="com.bj58.qf.order.service.ECommerceOrderService" id="eCommerceOrderService" check="false"/>
+    <!--类目服务-->
+    <dubbo:reference interface="com.qf58.cate.service.SystemCateService" id="systemCateService" check="false"/>
+
+</beans>

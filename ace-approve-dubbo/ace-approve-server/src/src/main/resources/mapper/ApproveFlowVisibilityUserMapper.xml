@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveFlowVisibilityUserMapper">
+  <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveFlowVisibilityUser">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_id" jdbcType="BIGINT" property="approveFlowId" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, approve_flow_id, company_id, user_id, create_time, update_time
+  </sql>
+  <select id="getVisibilityUserById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_approve_flow_visibility_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectVisibilityUserByApproveFlowId" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select
+    user_id
+    from t_approve_flow_visibility_user
+    where approve_flow_id = #{approveFlowId}
+  </select>
+  <select id="selectApproveFlowIdsByUserId" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select
+    approve_flow_id
+    from t_approve_flow_visibility_user
+    where company_id = #{companyId}
+    AND user_id = #{userId}
+  </select>
+  <delete id="deleteVisibilityUserById" parameterType="java.lang.Long">
+    delete from t_approve_flow_visibility_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteVisibilityByApproveFlowId" parameterType="java.lang.Long">
+    delete from t_approve_flow_visibility_user
+    where approve_flow_id = #{approveFlowId}
+  </delete>
+  <insert id="addVisibilityUserList" parameterType="java.util.ArrayList">
+    insert into t_approve_flow_visibility_user
+    (
+      id,
+      approve_flow_id,
+      company_id,
+      user_id,
+      create_time,
+      update_time
+    )
+    values
+    <foreach collection ="array" item="visibilityUser" separator ="," >
+      (
+        #{visibilityUser.id},
+        #{visibilityUser.approveFlowId},
+        #{visibilityUser.companyId},
+        #{visibilityUser.userId},
+        #{visibilityUser.createTime},
+        #{visibilityUser.updateTime}
+      )
+    </foreach >
+  </insert>
+  <insert id="addVisibilityUser" parameterType="com.qf58.ace.approve.entity.ApproveFlowVisibilityUser">
+    insert into t_approve_flow_visibility_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="approveFlowId != null">
+        approve_flow_id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="approveFlowId != null">
+        #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateVisibilityUserById" parameterType="com.qf58.ace.approve.entity.ApproveFlowVisibilityUser">
+    update t_approve_flow_visibility_user
+    <set>
+      <if test="approveFlowId != null">
+        approve_flow_id = #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveProcedureMapper">
+    <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveProcedure">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="approve_id" property="approveId" jdbcType="BIGINT"/>
+        <result column="approver_id" property="approverId" jdbcType="BIGINT"/>
+        <result column="approver" property="approver" jdbcType="VARCHAR"/>
+        <result column="approver_duty" property="approverDuty" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="approve_time" property="approveTime" jdbcType="TIMESTAMP"/>
+        <result column="groups" property="groups" jdbcType="TINYINT"/>
+        <result column="lot" property="lot" jdbcType="TINYINT"/>
+        <result column="type" property="type" jdbcType="TINYINT"/>
+        <result column="watch_level" property="watchLevel" jdbcType="TINYINT"/>
+        <result column="is_test" property="isTest" jdbcType="TINYINT"/>
+        <result column="initiator" property="initiator" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, approve_id, approver_id, approver, approver_duty, status, create_time, update_time, approve_time,
+        groups, lot, type, watch_level, is_test ,initiator,title,remark
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve_procedure
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getWaitMeApproveCount" resultType="java.lang.Long" parameterType="java.lang.Long">
+        select COUNT(DISTINCT approve_id) from t_approve_procedure where status = 4
+        <if test="userId!=null">
+            and approver_id = #{userId}
+        </if>
+    </select>
+
+    <select id="getApproveProcedureList"
+            parameterType="com.qf58.ace.approve.dto.ApproveProcedureSelectDto"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve_procedure
+        <where>
+            <if test="id!=null">
+                and id = #{id,jdbcType=BIGINT}
+            </if>
+            <if test="approveId!=null">
+                and approve_id = #{approveId,jdbcType=BIGINT}
+            </if>
+            <if test="approverId!=null">
+                and approver_id = #{approverId,jdbcType=BIGINT}
+            </if>
+            <if test="approver!=null">
+                and approver like CONCAT('%',#{approver,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="status!=null">
+                and status = #{status,jdbcType=TINYINT}
+            </if>
+            <if test="groups!=null">
+                and groups = #{groups,jdbcType=TINYINT}
+            </if>
+            <if test="lot!=null">
+                and lot = #{lot,jdbcType=TINYINT}
+            </if>
+            <if test="type!=null">
+                and type = #{type,jdbcType=TINYINT}
+            </if>
+            <if test="watchLevel!=null">
+                and watch_level = #{watchLevel,jdbcType=TINYINT}
+            </if>
+            <if test="isTest!=null">
+                and is_test = #{isTest,jdbcType=TINYINT}
+            </if>
+        </where>
+        order by groups,watch_level
+    </select>
+
+    <select id="getApproveProcedureListForDetail"
+            parameterType="com.qf58.ace.approve.dto.ApproveProcedureSelectDto"
+            resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve_procedure
+        <where>
+            <if test="id!=null">
+                and id = #{id,jdbcType=BIGINT}
+            </if>
+            <if test="approveId!=null">
+                and approve_id = #{approveId,jdbcType=BIGINT}
+            </if>
+            <if test="approverId!=null">
+                and approver_id = #{approverId,jdbcType=BIGINT}
+            </if>
+            <if test="approver!=null">
+                and approver like CONCAT('%',#{approver,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="status!=null">
+                and status = #{status,jdbcType=TINYINT}
+            </if>
+            <if test="groups!=null">
+                and groups = #{groups,jdbcType=TINYINT}
+            </if>
+            <if test="lot!=null">
+                and lot = #{lot,jdbcType=TINYINT}
+            </if>
+            <if test="type!=null">
+                and type = #{type,jdbcType=TINYINT}
+            </if>
+            <if test="watchLevel!=null">
+                and watch_level = #{watchLevel,jdbcType=TINYINT}
+            </if>
+            <if test="isTest!=null">
+                and is_test = #{isTest,jdbcType=TINYINT}
+            </if>
+        </where>
+        order by groups desc,approve_time desc
+    </select>
+
+
+    <select id="getWaitMeApproveList" parameterType="com.qf58.ace.approve.dto.ApproveSelectDto"
+            resultType="java.lang.Long">
+        select DISTINCT approve_id from t_approve_procedure where status = 4
+        <if test="userId!=null">
+            and approver_id = #{userId}
+        </if>
+        <if test="approvalId!=null">
+            and approve_id = #{approvalId}
+        </if>
+        <if test="title!=null and title!=''">
+            and title like CONCAT('%',#{title,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="sponsorDesc!=null and sponsorDesc!=''">
+            and initiator like CONCAT('%',#{sponsorDesc,jdbcType=VARCHAR},'%')
+        </if>
+        order by create_time desc
+    </select>
+
+    <select id="getMyApprovedList" parameterType="com.qf58.ace.approve.dto.ApproveSelectDto"
+            resultType="java.lang.Long">
+        select DISTINCT a.id FROM t_approve a INNER JOIN t_approve_procedure b on
+        a.id = b.approve_id  where b.status in (2,3)
+        <if test="userId!=null">
+            and b.approver_id = #{userId}
+        </if>
+        <if test="approvalId!=null">
+            and b.approve_id = #{approvalId}
+        </if>
+        <if test="title!=null and title!=''">
+            and b.title like CONCAT('%',#{title,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="sponsorDesc!=null and sponsorDesc!=''">
+            and b.initiator like CONCAT('%',#{sponsorDesc,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="status!=null">
+            <choose>
+                <when test="status==5">
+                    and a.status in (2,3)
+                </when>
+                <otherwise>
+                    and a.status = #{status,jdbcType=TINYINT}
+                </otherwise>
+            </choose>
+        </if>
+        order by a.create_time desc
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from t_approve_procedure
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insertApproveProcedureList" parameterType="java.util.ArrayList">
+        insert into t_approve_procedure
+        (
+        id,
+        approve_id,
+        approver_id,
+        approver,
+        approver_duty,
+        status,
+        create_time,
+        update_time,
+        approve_time,
+        groups,
+        lot,
+        type,
+        watch_level,
+        is_test,
+        initiator,
+        title,
+        remark
+        )
+        values
+        <foreach collection="list" item="approveProcedure" separator=",">
+            (
+            #{approveProcedure.id,jdbcType=BIGINT},
+            #{approveProcedure.approveId,jdbcType=BIGINT},
+            #{approveProcedure.approverId,jdbcType=BIGINT},
+            #{approveProcedure.approver,jdbcType=VARCHAR},
+            #{approveProcedure.approverDuty,jdbcType=VARCHAR},
+            #{approveProcedure.status,jdbcType=TINYINT},
+            #{approveProcedure.createTime,jdbcType=TIMESTAMP},
+            #{approveProcedure.updateTime,jdbcType=TIMESTAMP},
+            #{approveProcedure.approveTime,jdbcType=TIMESTAMP},
+            #{approveProcedure.groups,jdbcType=TINYINT},
+            #{approveProcedure.lot,jdbcType=TINYINT},
+            #{approveProcedure.type,jdbcType=TINYINT},
+            #{approveProcedure.watchLevel,jdbcType=TINYINT},
+            #{approveProcedure.isTest,jdbcType=TINYINT},
+            #{approveProcedure.initiator,jdbcType=VARCHAR},
+            #{approveProcedure.title,jdbcType=VARCHAR},
+            #{approveProcedure.remark,jdbcType=VARCHAR}
+            )
+        </foreach>
+
+    </insert>
+
+    <insert id="insert" parameterType="com.qf58.ace.approve.entity.ApproveProcedure">
+        insert into t_approve_procedure (id,
+                                         approve_id,
+                                         approver_id,
+                                         approver,
+                                         approver_duty,
+                                         status,
+                                         create_time,
+                                         update_time,
+                                         approve_time,
+                                         groups,
+                                         lot,
+                                         type,
+                                         watch_level,
+                                         is_test,
+                                         initiator,
+                                         title,
+                                         remark)
+        values (#{id,jdbcType=BIGINT},
+                #{approveId,jdbcType=BIGINT},
+                #{approverId,jdbcType=BIGINT},
+                #{approver,jdbcType=VARCHAR},
+                #{approverDuty,jdbcType=VARCHAR},
+                #{status,jdbcType=TINYINT},
+                #{createTime,jdbcType=TIMESTAMP},
+                #{updateTime,jdbcType=TIMESTAMP},
+                #{approveTime,jdbcType=TIMESTAMP},
+                #{groups,jdbcType=TINYINT},
+                #{lot,jdbcType=TINYINT},
+                #{type,jdbcType=TINYINT},
+                #{watchLevel,jdbcType=TINYINT},
+                #{isTest,jdbcType=TINYINT},
+                #{initiator,jdbcType=VARCHAR},
+                #{title,jdbcType=VARCHAR},
+                #{remark,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.qf58.ace.approve.entity.ApproveProcedure">
+        insert into t_approve_procedure
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="approveId != null">
+                approve_id,
+            </if>
+            <if test="approverId != null">
+                approver_id,
+            </if>
+            <if test="approver != null">
+                approver,
+            </if>
+            <if test="approverDuty != null">
+                approver_duty,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="approveTime != null">
+                approve_time,
+            </if>
+            <if test="groups != null">
+                groups,
+            </if>
+            <if test="lot != null">
+                lot,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="watchLevel != null">
+                watch_level,
+            </if>
+            <if test="isTest != null">
+                is_test,
+            </if>
+            <if test="initiator != null">
+                initiator,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="approveId != null">
+                #{approveId,jdbcType=BIGINT},
+            </if>
+            <if test="approverId != null">
+                #{approverId,jdbcType=BIGINT},
+            </if>
+            <if test="approver != null">
+                #{approver,jdbcType=VARCHAR},
+            </if>
+            <if test="approverDuty != null">
+                #{approverDuty,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="approveTime != null">
+                #{approveTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="groups != null">
+                #{groups,jdbcType=TINYINT},
+            </if>
+            <if test="lot != null">
+                #{lot,jdbcType=TINYINT},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=TINYINT},
+            </if>
+            <if test="watchLevel != null">
+                #{watchLevel,jdbcType=TINYINT},
+            </if>
+            <if test="isTest != null">
+                #{isTest,jdbcType=TINYINT},
+            </if>
+            <if test="initiator != null">
+                #{initiator,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective"
+            parameterType="com.qf58.ace.approve.dto.ApproveProcedureDto">
+        update t_approve_procedure
+        <set>
+            <if test="approveId != null">
+                approve_id = #{approveId,jdbcType=BIGINT},
+            </if>
+            <if test="approverId != null">
+                approver_id = #{approverId,jdbcType=BIGINT},
+            </if>
+            <if test="approver != null">
+                approver = #{approver,jdbcType=VARCHAR},
+            </if>
+            <if test="approverDuty != null">
+                approver_duty = #{approverDuty,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="approveTime != null">
+                approve_time = #{approveTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="groups != null">
+                groups = #{groups,jdbcType=TINYINT},
+            </if>
+            <if test="lot != null">
+                lot = #{lot,jdbcType=TINYINT},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=TINYINT},
+            </if>
+            <if test="watchLevel != null">
+                watch_level = #{watchLevel,jdbcType=TINYINT},
+            </if>
+            <if test="isTest != null">
+                is_test = #{isTest,jdbcType=TINYINT},
+            </if>
+            <if test="initiator != null">
+                initiator = #{initiator,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.qf58.ace.approve.entity.ApproveProcedure">
+        update t_approve_procedure
+        set approve_id    = #{approveId,jdbcType=BIGINT},
+            approver_id   = #{approverId,jdbcType=BIGINT},
+            approver      = #{approver,jdbcType=VARCHAR},
+            approver_duty = #{approverDuty,jdbcType=VARCHAR},
+            status        = #{status,jdbcType=TINYINT},
+            create_time   = #{createTime,jdbcType=TIMESTAMP},
+            update_time   = #{updateTime,jdbcType=TIMESTAMP},
+            approve_time  = #{approveTime,jdbcType=TIMESTAMP},
+            groups        = #{groups,jdbcType=TINYINT},
+            lot           = #{lot,jdbcType=TINYINT},
+            type          = #{type,jdbcType=TINYINT},
+            watch_level   = #{watchLevel,jdbcType=TINYINT},
+            is_test       = #{isTest,jdbcType=TINYINT},
+            initiator     = #{initiator,jdbcType=VARCHAR},
+            title       = #{title,jdbcType=VARCHAR},
+            remark       = #{remark,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+
+</mapper>

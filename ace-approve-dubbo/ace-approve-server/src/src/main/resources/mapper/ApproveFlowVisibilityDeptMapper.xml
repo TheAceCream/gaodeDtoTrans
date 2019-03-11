@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveFlowVisibilityDeptMapper">
+  <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveFlowVisibilityDept">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_id" jdbcType="BIGINT" property="approveFlowId" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="department_id" jdbcType="BIGINT" property="departmentId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, approve_flow_id, company_id, department_id, create_time, update_time
+  </sql>
+  <select id="getVisibilityDeptById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_approve_flow_visibility_dept
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectVisibilityDeptByApproveFlowId" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select 
+    department_id
+    from t_approve_flow_visibility_dept
+    where approve_flow_id = #{approveFlowId}
+  </select>
+  <select id="selectApproveFlowIdsByDeptIds" parameterType="java.util.ArrayList" resultType="java.lang.Long">
+    select
+    approve_flow_id
+    from t_approve_flow_visibility_dept
+    where company_id = #{companyId}
+    AND department_id in
+    <foreach collection ="array" item="visibilityDept" separator ="," open="(" close=")">
+      #{visibilityDept}
+    </foreach >
+  </select>
+  <delete id="deleteVisibilityDeptById" parameterType="java.lang.Long">
+    delete from t_approve_flow_visibility_dept
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteVisibilityByApproveFlowId" parameterType="java.lang.Long">
+    delete from t_approve_flow_visibility_dept
+    where approve_flow_id = #{approveFlowId}
+  </delete>
+  <insert id="addVisibilityDeptList" parameterType="java.util.ArrayList" >
+    insert into t_approve_flow_visibility_dept
+    (
+        id,
+        approve_flow_id,
+        company_id,
+        department_id,
+        create_time,
+        update_time
+    )
+    values
+    <foreach collection ="array" item="visibilityDept" separator =",">
+      (
+        #{visibilityDept.id},
+        #{visibilityDept.approveFlowId},
+        #{visibilityDept.companyId},
+        #{visibilityDept.departmentId},
+        #{visibilityDept.createTime},
+        #{visibilityDept.updateTime}
+      )
+    </foreach >
+  </insert>
+  <insert id="addVisibilityDept" parameterType="com.qf58.ace.approve.entity.ApproveFlowVisibilityDept">
+    insert into t_approve_flow_visibility_dept
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="approveFlowId != null">
+        approve_flow_id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="departmentId != null">
+        department_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="approveFlowId != null">
+        #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="departmentId != null">
+        #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateVisibilityDeptById" parameterType="com.qf58.ace.approve.entity.ApproveFlowVisibilityDept">
+    update t_approve_flow_visibility_dept
+    <set>
+      <if test="approveFlowId != null">
+        approve_flow_id = #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="departmentId != null">
+        department_id = #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

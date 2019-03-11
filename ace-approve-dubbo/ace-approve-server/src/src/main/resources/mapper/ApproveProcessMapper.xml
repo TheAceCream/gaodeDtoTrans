@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveProcessMapper">
+  <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveProcess">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="next_id" jdbcType="BIGINT" property="nextId" />
+    <result column="approve_flow_id" jdbcType="BIGINT" property="approveFlowId" />
+    <result column="approve_type" jdbcType="TINYINT" property="approveType" />
+    <result column="approve_type_name" jdbcType="VARCHAR" property="approveTypeName" />
+    <result column="approve_dept" jdbcType="INTEGER" property="approveDept" />
+    <result column="approve_end" jdbcType="INTEGER" property="approveEnd" />
+    <result column="approve_role" jdbcType="VARCHAR" property="approveRole" />
+    <result column="role_type" jdbcType="TINYINT" property="roleType" />
+    <result column="approve_mode" jdbcType="TINYINT" property="approveMode" />
+    <result column="vacancy" jdbcType="TINYINT" property="vacancy" />
+    <result column="approve_employee" jdbcType="VARCHAR" property="approveEmployee" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, next_id, approve_flow_id, approve_type, approve_type_name, approve_dept, approve_end,
+    approve_role, role_type, approve_mode, vacancy, approve_employee, create_time, update_time
+  </sql>
+  <select id="getApproveProcessById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_approve_process
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteApproveProcessById" parameterType="java.lang.Long">
+    delete from t_approve_process
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="addApproveProcessList" parameterType="java.util.ArrayList">
+    insert into t_approve_process
+    (
+        id,
+        next_id,
+        approve_flow_id,
+        approve_type,
+        approve_type_name,
+        approve_dept,
+        approve_end,
+        approve_role,
+        role_type,
+        approve_mode,
+        vacancy,
+        approve_employee,
+        create_time,
+        update_time
+    )
+    VALUES
+    <foreach collection ="array" item="approveProcess" separator =",">
+      (
+        #{approveProcess.id},
+        #{approveProcess.nextId},
+        #{approveProcess.approveFlowId},
+        #{approveProcess.approveType},
+        #{approveProcess.approveTypeName},
+        #{approveProcess.approveDept},
+        #{approveProcess.approveEnd},
+        #{approveProcess.approveRole},
+        #{approveProcess.roleType},
+        #{approveProcess.approveMode},
+        #{approveProcess.vacancy},
+        #{approveProcess.approveEmployee},
+        #{approveProcess.createTime},
+        #{approveProcess.updateTime}
+      )
+    </foreach >
+  </insert>
+  <insert id="addApproveProcess" parameterType="com.qf58.ace.approve.entity.ApproveProcess">
+    insert into t_approve_process
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="nextId != null">
+        next_id,
+      </if>
+      <if test="approveFlowId != null">
+        approve_flow_id,
+      </if>
+      <if test="approveType != null">
+        approve_type,
+      </if>
+      <if test="approveTypeName != null">
+        approve_type_name,
+      </if>
+      <if test="approveDept != null">
+        approve_dept,
+      </if>
+      <if test="approveEnd != null">
+        approve_end,
+      </if>
+      <if test="approveRole != null">
+        approve_role,
+      </if>
+      <if test="roleType != null">
+        role_type,
+      </if>
+      <if test="approveMode != null">
+        approve_mode,
+      </if>
+      <if test="vacancy != null">
+        vacancy,
+      </if>
+      <if test="approveEmployee != null">
+        approve_employee,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="nextId != null">
+        #{nextId,jdbcType=BIGINT},
+      </if>
+      <if test="approveFlowId != null">
+        #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="approveType != null">
+        #{approveType,jdbcType=TINYINT},
+      </if>
+      <if test="approveTypeName != null">
+        #{approveTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="approveDept != null">
+        #{approveDept,jdbcType=INTEGER},
+      </if>
+      <if test="approveEnd != null">
+        #{approveEnd,jdbcType=INTEGER},
+      </if>
+      <if test="approveRole != null">
+        #{approveRole,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        #{roleType,jdbcType=TINYINT},
+      </if>
+      <if test="approveMode != null">
+        #{approveMode,jdbcType=TINYINT},
+      </if>
+      <if test="vacancy != null">
+        #{vacancy,jdbcType=TINYINT},
+      </if>
+      <if test="approveEmployee != null">
+        #{approveEmployee,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateApproveProcessById" parameterType="com.qf58.ace.approve.entity.ApproveProcess">
+    update t_approve_process
+    <set>
+      <if test="nextId != null">
+        next_id = #{nextId,jdbcType=BIGINT},
+      </if>
+      <if test="approveFlowId != null">
+        approve_flow_id = #{approveFlowId,jdbcType=BIGINT},
+      </if>
+      <if test="approveType != null">
+        approve_type = #{approveType,jdbcType=TINYINT},
+      </if>
+      <if test="approveTypeName != null">
+        approve_type_name = #{approveTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="approveDept != null">
+        approve_dept = #{approveDept,jdbcType=INTEGER},
+      </if>
+      <if test="approveEnd != null">
+        approve_end = #{approveEnd,jdbcType=INTEGER},
+      </if>
+      <if test="approveRole != null">
+        approve_role = #{approveRole,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        role_type = #{roleType,jdbcType=TINYINT},
+      </if>
+      <if test="approveMode != null">
+        approve_mode = #{approveMode,jdbcType=TINYINT},
+      </if>
+      <if test="vacancy != null">
+        vacancy = #{vacancy,jdbcType=TINYINT},
+      </if>
+      <if test="approveEmployee != null">
+        approve_employee = #{approveEmployee,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

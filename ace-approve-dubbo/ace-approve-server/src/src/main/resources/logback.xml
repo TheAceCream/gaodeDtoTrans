@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" debug="true">
+
+    <property name="baseLogFilePath" value="./logs" />
+    <contextName>crm-provider-pms</contextName>
+
+    <!-- console appender定义 -->
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c:%L] [%thread] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- info日志 -->
+    <appender name="dubboInfoAppender"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${baseLogFilePath}/ace-server-info.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${baseLogFilePath}/ace-server-info.log.%d{yyyy-MM-dd}
+            </FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{68} %line - %msg%n</Pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- error日志 -->
+    <appender name="dubboErrorAppender"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${baseLogFilePath}/ace-server-error.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${baseLogFilePath}/ace-server-error.log.%d{yyyy-MM-dd}
+            </FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{68} %line - %msg%n</Pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <!-- 异常输出 -->
+    <appender name="dubboAsyncErrorAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>128</queueSize>
+        <includeCallerData>true</includeCallerData>
+        <appender-ref ref="dubboErrorAppender"/>
+    </appender>
+
+
+    <!-- sql 语句输出 -->
+    <appender name="sqlAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${baseLogFilePath}/sql.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${baseLogFilePath}/sql.log.%d{yyyy-MM-dd-HH}
+            </fileNamePattern>
+            <maxHistory>100</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} %line - %msg%n
+            </pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <!-- file asynch appender -->
+    <appender name="sqlAsyncAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>124</queueSize>
+        <appender-ref ref="sqlAppender"/>
+    </appender>
+
+    <!--对应上本服务包名，否则日志不输出-->
+    <logger name="com.qf58.ace" level="ERROR" additivity="true">
+        <appender-ref ref="dubboAsyncErrorAppender"/>
+    </logger>
+
+    <!-- sql 语句输出 不管正确错误,只输出sql语句 -->
+    <logger name="mapper" level="DEBUG" additivity="true">
+        <appender-ref ref="sqlAsyncAppender"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="consoleAppender"/>
+        <appender-ref ref="dubboInfoAppender"/>
+    </root>
+
+
+</configuration>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="${dubbo.appname}"/>
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="${zookeeper.server}" group="${dubbo.group}"/>
+
+    <dubbo:consumer timeout="20000000" retries="0" check="false"/>
+
+    <dubbo:reference interface="com.qf58.bd.api.extend.HiveJobService" id="hiveJobService"/>
+    <dubbo:reference interface="com.qf58.bd.api.extend.HiveJobExportConfigService" id="hiveJobExportConfigService" />
+    <dubbo:reference interface="com.qf58.bd.api.extend.HiveJobImportConfigService" id="hiveJobImportConfigService"/>
+    <dubbo:reference interface="com.qf58.bd.api.extend.HiveJobLogService" id="hiveJobLogService" />
+    <dubbo:reference interface="com.qf58.bd.api.extend.JobScheduleService" id="jobScheduleService" />
+    <dubbo:reference interface="com.qf58.bd.api.extend.JobScheduleLogService" id="jobScheduleLogService" />
+
+    <dubbo:reference interface="com.qf58.bd.api.kylins.ClueKylinService" id="clueKylinService" />
+    <dubbo:reference interface="com.qf58.bd.api.kylins.ProjectKylinService" id="projectKylinService" />
+    <dubbo:reference interface="com.qf58.bd.api.kylins.SupplierKylinService" id="supplierKylinService" />
+    <dubbo:reference interface="com.qf58.bd.api.kylins.OrderKylinService" id="orderKylinService" />
+
+
+    <dubbo:reference interface="com.qf58.bd.api.extend.UtilService" id="utilService" />
+
+
+    <dubbo:reference id="cateService" interface="com.bj58.qifu.service.CateService"/>
+
+    <dubbo:reference id="userAgent" interface="com.qifu.sso.user.agent.UserAgent"/>
+    <dubbo:reference id="roleAgent" interface="com.qifu.sso.role.agent.RoleAgent" />
+    <dubbo:reference id="funcAgent" interface="com.qifu.sso.func.agent.AclFuncAgent"/>
+    <dubbo:reference id="departmentAgent" interface="com.qifu.sso.department.agent.DepartmentAgent"/>
+</beans>

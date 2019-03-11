@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveFlowMapper">
+  <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveFlow">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_name" jdbcType="VARCHAR" property="approveFlowName" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="cate_id" jdbcType="BIGINT" property="cateId" />
+    <result column="cate_desc" jdbcType="VARCHAR" property="cateDesc" />
+    <result column="control_sign" jdbcType="TINYINT" property="controlSign" />
+    <result column="visibility_desc" jdbcType="VARCHAR" property="visibilityDesc" />
+    <result column="approve_process_id" jdbcType="BIGINT" property="approveProcessId" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_test" jdbcType="TINYINT" property="isTest" />
+  </resultMap>
+  <resultMap id="ListDtoResultMap" type="com.qf58.ace.approve.dto.ApproveFlowListDto">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_name" jdbcType="VARCHAR" property="approveFlowName" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="cate_id" jdbcType="BIGINT" property="cateId" />
+    <result column="cate_desc" jdbcType="VARCHAR" property="cateDesc" />
+    <result column="control_sign" jdbcType="TINYINT" property="controlSign" />
+    <result column="visibility_desc" jdbcType="VARCHAR" property="visibilityDesc" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap id="ExternalDtoResultMap" type="com.qf58.ace.approve.dto.ApproveFlowExternalGetDto">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_name" jdbcType="VARCHAR" property="approveFlowName" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="cate_id" jdbcType="BIGINT" property="cateId" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+  <resultMap id="LaunchDtoResultMap" type="com.qf58.ace.approve.dto.ApproveLaunchListDto">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="approve_flow_name" jdbcType="VARCHAR" property="approveFlowName" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="cate_id" jdbcType="BIGINT" property="cateId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, approve_flow_name, icon, company_id, cate_id, cate_desc, control_sign, visibility_desc, approve_process_id, state,
+    create_time, update_time, is_test
+  </sql>
+  <sql id="ListDto_Column_List">
+    id, approve_flow_name, icon, company_id, cate_id, cate_desc, control_sign, visibility_desc, approve_process_id, state,
+    create_time, update_time, is_test
+  </sql>
+  <sql id="External_Column_List">
+  id, approve_flow_name, company_id, cate_id, state
+  </sql>
+  <sql id="Launch_Column_List">
+    id, approve_flow_name, icon, company_id, cate_id
+  </sql>
+  <select id="selectApproveFlowList" parameterType="java.lang.Long" resultMap="ListDtoResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_approve_flow
+    where 1 = 1
+    <if test="companyId != null">
+      and company_id = #{companyId}
+    </if>
+    <if test="state != null">
+      and state = #{state}
+    </if>
+    <if test="approveFlowName != null">
+      and approve_flow_name LIKE CONCAT('%',#{approveFlowName},'%')
+    </if>
+    <!--<if test="isTest != null">
+      and is_test = #{isTest}
+    </if>-->
+    order by create_time desc
+  </select>
+  <select id="selectApproveList" parameterType="java.util.Set" resultMap="LaunchDtoResultMap">
+    select
+    <include refid="Launch_Column_List" />
+    from t_approve_flow
+    where 1 = 1 and id in
+    <foreach collection ="set" item="flowId" separator ="," open="(" close=")">
+      #{flowId}
+    </foreach >
+    and state = 1 and is_test = #{isTest}
+  </select>
+  <select id="getApproveFlowById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_approve_flow
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="getProcessIdByApproveFlowId" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select
+    approve_process_id
+    from t_approve_flow
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="getExternalApproveFlowById" parameterType="java.lang.Long" resultMap="ExternalDtoResultMap">
+    select
+    <include refid="External_Column_List" />
+    from t_approve_flow
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteApproveFlowById" parameterType="java.lang.Long">
+    delete from t_approve_flow
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="addApproveFlow" parameterType="com.qf58.ace.approve.entity.ApproveFlow">
+    insert into t_approve_flow
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="approveFlowName != null">
+        approve_flow_name,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="cateId != null">
+        cate_id,
+      </if>
+      <if test="cateDesc != null">
+        cate_desc,
+      </if>
+      <if test="controlSign != null">
+        control_sign,
+      </if>
+      <if test="visibilityDesc != null">
+        visibility_desc,
+      </if>
+      <if test="approveProcessId != null">
+        approve_process_id,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="isTest != null">
+        is_test,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="approveFlowName != null">
+        #{approveFlowName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="cateId != null">
+        #{cateId,jdbcType=BIGINT},
+      </if>
+      <if test="cateDesc != null">
+        #{cateDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="controlSign != null">
+        #{controlSign,jdbcType=TINYINT},
+      </if>
+      <if test="visibilityDesc != null">
+        #{visibilityDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="approveProcessId != null">
+        #{approveProcessId,jdbcType=BIGINT},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isTest != null">
+        #{isTest,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateApproveFlow" parameterType="com.qf58.ace.approve.entity.ApproveFlow">
+    update t_approve_flow
+    <set>
+      <if test="approveFlowName != null">
+        approve_flow_name = #{approveFlowName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="cateId != null">
+        cate_id = #{cateId,jdbcType=BIGINT},
+      </if>
+      <if test="cateDesc != null">
+        cate_desc = #{cateDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="controlSign != null">
+        control_sign = #{controlSign,jdbcType=TINYINT},
+      </if>
+      <if test="visibilityDesc != null">
+        visibility_desc = #{visibilityDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="approveProcessId != null">
+        approve_process_id = #{approveProcessId,jdbcType=BIGINT},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isTest != null">
+        is_test = #{isTest,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 全局参数 -->
+	<settings>
+		<!-- 设置但JDBC类型为空时,某些驱动程序 要指定值,default:OTHER，插入空值时不需要指定类型 -->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+
+		<!-- 打印查询语句 : 打开时控制台有输出,但是logback sqlAsyncAppender 将无输出-->
+		<!--<setting name="logImpl" value="STDOUT_LOGGING" />-->
+
+		<!-- 控制打印mybatis日志输出到指定文件 -->
+		<setting name="logPrefix" value="mapper."/>
+
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="hashMap" type="java.util.HashMap"/>
+	</typeAliases>
+
+</configuration>

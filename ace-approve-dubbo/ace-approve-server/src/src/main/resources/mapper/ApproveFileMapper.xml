@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf58.ace.approve.server.mapper.ApproveFileMapper">
+    <resultMap id="BaseResultMap" type="com.qf58.ace.approve.entity.ApproveFile">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="approve_id" property="approveId" jdbcType="BIGINT"/>
+        <result column="approve_procedure_id" property="approveProcedureId" jdbcType="BIGINT"/>
+        <result column="file_key" property="fileKey" jdbcType="VARCHAR"/>
+        <result column="file_type" property="fileType" jdbcType="TINYINT"/>
+        <result column="pic_url" property="picUrl" jdbcType="VARCHAR"/>
+        <result column="origin_name" property="originName" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="size" property="size" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, approve_id, approve_procedure_id, file_key, file_type, pic_url,
+        origin_name, create_time, size , user_name
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_approve_upload
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getApproveFileList" parameterType="com.qf58.ace.approve.dto.ApproveFileSelectDto" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+            from t_approve_upload
+        <where>
+            <if test="approvalId!=null">
+                and approve_id = #{approvalId,jdbcType=BIGINT}
+            </if>
+            <if test="approveProcedureId!=null">
+                and approve_procedure_id = #{approveProcedureId,jdbcType=BIGINT}
+            </if>
+            <if test="fileKey!=null">
+                and file_key = #{fileKey,jdbcType=VARCHAR}
+            </if>
+            <if test="fileType!=null">
+                and file_type = #{fileType,jdbcType=TINYINT}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from t_approve_upload
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insertSelective" parameterType="com.qf58.ace.approve.entity.ApproveFile">
+        insert into t_approve_upload
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="approveId != null">
+                approve_id,
+            </if>
+            <if test="approveProcedureId != null">
+                approve_procedure_id,
+            </if>
+            <if test="fileKey != null">
+                file_key,
+            </if>
+            <if test="fileType != null">
+                file_type,
+            </if>
+            <if test="picUrl != null">
+                pic_url,
+            </if>
+            <if test="originName != null">
+                origin_name,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="size != null">
+                size,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="approveId != null">
+                #{approveId,jdbcType=BIGINT},
+            </if>
+            <if test="approveProcedureId != null">
+                #{approveProcedureId,jdbcType=BIGINT},
+            </if>
+            <if test="fileKey != null">
+                #{fileKey,jdbcType=VARCHAR},
+            </if>
+            <if test="fileType != null">
+                #{fileType,jdbcType=TINYINT},
+            </if>
+            <if test="picUrl != null">
+                #{picUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="originName != null">
+                #{originName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="size != null">
+                #{size,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>
