@@ -15,7 +15,7 @@
 
     <properties>
         <spring.version>4.2.7.RELEASE</spring.version>
-        <dubbo.version>2.5.3</dubbo.version>
+        <dubbo.version>2.6.12</dubbo.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cate.api.version>1.4-SNAPSHOT</cate.api.version>
         <acePassport.version>1.0-SNAPSHOT</acePassport.version>
