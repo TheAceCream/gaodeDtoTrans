@@ -14,7 +14,7 @@
 
 
     <properties>
-        <spring.version>4.2.7.RELEASE</spring.version>
+        <spring.version>6.0.0</spring.version>
         <dubbo.version>2.5.3</dubbo.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cate.api.version>1.4-SNAPSHOT</cate.api.version>
